@@ -69,7 +69,7 @@ public class InPlaceSorts
             }
         }
     }
-    public int Partition (int[] arr, int left, int right){
+    public int Partitionn (int[] arr, int left, int right){
         int pivot = right;
         int i = left--;
         for (int j = 0; j < arr.length; j++){

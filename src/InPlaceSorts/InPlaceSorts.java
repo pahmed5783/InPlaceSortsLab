@@ -69,6 +69,22 @@ public class InPlaceSorts
             }
         }
     }
+    public int Parition (int[] arr, int left, int right){
+        int pivot = right;
+        int i = left--;
+        for (int j = 0; j < arr.length; j++){
+            if (arr[j] <= pivot){
+                i++;
+                int tmp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = tmp;
+            }
+        }
+        int tmp = arr[i+1];
+        arr[i+1] = arr[right];
+        arr[right] = tmp;
+        return arr[i+1];
+    }
 
     public int[] genInts(int n)
     {
